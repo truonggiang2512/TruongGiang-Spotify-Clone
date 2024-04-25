@@ -130,6 +130,9 @@ export default function Home() {
           p: 3,
           width: `calc(100% - ${drawerWidth}px)`,
           ml: `${drawerWidth}px`,
+          backgroundImage: `url(/Linear.png)`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top top",
         }}
       >
         <Box>
