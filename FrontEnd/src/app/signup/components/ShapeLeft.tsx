@@ -16,9 +16,10 @@ const ShapeLeft = (props: Props) => {
         backgroundColor: theme.background.paper,
         overflow: "auto",
         maxHeight: "calc(100vh - 64px)",
+        height: "calc(100vh - 64px)",
       }}
     >
-      <Box textAlign="center" p={4}>
+      <Box textAlign="center" p={2}>
         <Box>
           <Button>
             <Avatar

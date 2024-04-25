@@ -1,6 +1,7 @@
 import Footer from "./components/footer";
 import Navbar from "./components/Navbar";
 import ThemeRegistry from "@/app/lib/ThemeRegistry";
+import DrawerComponent from "./components/DrawerComponent";
 const metadata = {
   title: "Giangdev Spotify",
   description: "Clone Spotify",
@@ -9,19 +10,19 @@ const metadata = {
 export default function RootLayout({
   children,
   isHeader,
-  isFooter,
+  isDrawer,
 }: {
   children: React.ReactNode;
   isHeader?: boolean;
-  isFooter?: boolean;
+  isDrawer?: boolean;
 }) {
   return (
     <html lang="en">
       <body>
         <ThemeRegistry>
           {isHeader ? <Navbar /> : <></>}
+          {isDrawer ? <DrawerComponent /> : <></>}
           {children}
-          {isFooter ? <Footer /> : <></>}
         </ThemeRegistry>
       </body>
     </html>
