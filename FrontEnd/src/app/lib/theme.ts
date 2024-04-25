@@ -4,6 +4,7 @@ const theme = {
   background: {
     default: "#121212",
     paper: "#000000",
+    playListTag: "#FFFFFF",
   },
   text: {
     primary: "#FFFFFF",

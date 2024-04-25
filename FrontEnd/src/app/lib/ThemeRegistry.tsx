@@ -3,15 +3,7 @@ import { Lalezar, Roboto } from "next/font/google";
 import { createTheme, ThemeOptions, ThemeProvider } from "@mui/material/styles";
 import { colors, CssBaseline } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { PaletteOptions } from "@mui/material/styles";
 import React from "react";
-
-// Define the custom palette options type
-interface CustomPaletteOptions extends PaletteOptions {
-  black?: {
-    main: string;
-  };
-}
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -48,6 +40,31 @@ const themeOptions: ThemeOptions = {
       fontFamily: laleraz.style.fontFamily,
       fontSize: 18,
       textAlign: "center",
+    },
+    caption: {
+      fontWeight: 500,
+      lineHeight: 1.25,
+      fontFamily: roboto.style.fontFamily,
+      fontSize: 24,
+    },
+    h3: {
+      fontWeight: 500,
+      lineHeight: 1.25,
+      fontFamily: roboto.style.fontFamily,
+      fontSize: 32,
+    },
+    subtitle1: {
+      fontWeight: 500,
+      lineHeight: 1.25,
+      fontFamily: roboto.style.fontFamily,
+      fontSize: 16,
+    },
+    body2: {
+      fontWeight: 400,
+      lineHeight: 1.25,
+      fontFamily: roboto.style.fontFamily,
+      fontSize: 16,
+      color: "#B3B3B3",
     },
   },
   components: {
@@ -90,6 +107,7 @@ const themeOptions: ThemeOptions = {
         root: {
           "&.MuiDivider-root": {
             backgroundColor: "#FFFFFF",
+            margin: 0,
           },
         },
       },
@@ -106,6 +124,39 @@ const themeOptions: ThemeOptions = {
           },
         },
       ],
+    },
+    MuiMenu: {
+      styleOverrides: {
+        paper: {
+          borderRadius: 6,
+          marginTop: "8px",
+          minWidth: 180,
+          color: "rgb(55, 65, 81)",
+          boxShadow:
+            "0px 0px 0px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)",
+          "& .MuiMenu-list": {
+            padding: "4px 0",
+          },
+          "& .MuiMenuItem-root": {
+            "& .MuiSvgIcon-root": {
+              fontSize: 18,
+              marginRight: "12px",
+            },
+          },
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          color: "#fff",
+          padding: "6px 10px",
+          backgroundColor: "#282828",
+          "&:hover": {
+            backgroundColor: "#383838",
+          },
+        },
+      },
     },
   },
 
